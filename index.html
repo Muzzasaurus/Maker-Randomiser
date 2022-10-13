@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="scripts.js" defer></script>
+		<script src="blockScripts.js" defer></script>
+		<script src="spikeScripts.js" defer></script>
+		<script src="bgScripts.js" defer></script>
+		<script src="jumpScripts.js" defer></script>
+        <link rel="stylesheet" href="style.css">
+		<meta name="author" content="Muzza">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700" rel="stylesheet">
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	</head>
+	<body>
+		<title>THE Game Maker</title>
+		<nav>
+			<button id="randomise" onclick="switchTo('block')">Blocks</button>
+			<button id="randomise" onclick="switchTo('spike')">Spikes</button>
+			<button id="randomise" onclick="switchTo('bg')">Background</button>
+			<button id="randomise" onclick="switchTo('flag')">Start & End</button>
+			<button id="randomise" onclick="switchTo('music')">Music</button>
+			<button id="randomise" onclick="switchTo('jump')">Jumps</button>
+		</nav>
+		<div id="blockMenu">
+		<div class="itemTitle">
+			<h1>Block 1</h1>
+			<button id="randomise" onclick="randomiseBlock(1)">Randomise!</button>
+		</div>
+			<div class="column left">
+				<h2 id="hueTracker1">Hue +0</h2>
+				<input type="range" class="slider" id="hueSlider1" oninput="updateImg(1)" min="-180" max="180" value="0">
+				<h2 id="satTracker1">Sat x1</h2>
+				<input type="range" class="slider" id="satSlider1" oninput="updateImg(1)" min="0" max="400" value="100">
+				<h2 id="valTracker1">Val 0%</h2>
+				<input type="range" class="slider" id="valSlider1" oninput="updateImg(1)" min="0" max="200" value="100">
+			</div>
+			<div class="column right"><img id="block1ImageUnfiltered" src="Blocks/Block 1.png"><img id="block1Image" src="Blocks/Block 1.png"></div>
+		<div class="itemTitle">
+			<h1>Block 2</h1>
+			<button id="randomise" onclick="randomiseBlock(2)">Randomise!</button>
+		</div>
+		<div class="row">
+			<div class="column left">
+				<h2 id="hueTracker2">Hue +0</h2>
+				<input type="range" class="slider" id="hueSlider2" oninput="updateImg(2)" min="-180" max="180" value="0">
+				<h2 id="satTracker2">Sat x1</h2>
+				<input type="range" class="slider" id="satSlider2" oninput="updateImg(2)" min="0" max="400" value="100">
+				<h2 id="valTracker2">Val 0%</h2>
+				<input type="range" class="slider" id="valSlider2" oninput="updateImg(2)" min="0" max="200" value="100">
+			</div>
+			<div class="column right"><img id="block2ImageUnfiltered" src="Blocks/Block 1.png"><img id="block2Image" src="Blocks/Block 1.png"></div>
+		</div>
+		</div>
+		<div id="spikeMenu" hidden>
+		<div class="itemTitle">
+			<h1>Spike 1</h1>
+			<button id="randomise" onclick="randomiseSpike(1)">Randomise!</button>
+		</div>
+			<div class="column left">
+				<h2 id="hueTracker3">Hue +0</h2>
+				<input type="range" class="slider" id="hueSlider3" oninput="updateSpikeImg(1)" min="-180" max="180" value="0">
+				<h2 id="satTracker3">Sat x1</h2>
+				<input type="range" class="slider" id="satSlider3" oninput="updateSpikeImg(1)" min="0" max="400" value="100">
+				<h2 id="valTracker3">Val 0%</h2>
+				<input type="range" class="slider" id="valSlider3" oninput="updateSpikeImg(1)" min="0" max="200" value="100">
+			</div>
+			<div class="column right"><img id="spike1ImageUnfiltered" src="Spikes/Spike 1.png"><img id="spike1Image" src="Spikes/Spike 1.png"></div>
+		<div class="itemTitle">
+			<h1>Spike 2</h1>
+			<button id="randomise" onclick="randomiseSpike(2)">Randomise!</button>
+		</div>
+		<div class="row">
+			<div class="column left">
+				<h2 id="hueTracker4">Hue +0</h2>
+				<input type="range" class="slider" id="hueSlider4" oninput="updateSpikeImg(2)" min="-180" max="180" value="0">
+				<h2 id="satTracker4">Sat x1</h2>
+				<input type="range" class="slider" id="satSlider4" oninput="updateSpikeImg(2)" min="0" max="400" value="100">
+				<h2 id="valTracker4">Val 0%</h2>
+				<input type="range" class="slider" id="valSlider4" oninput="updateSpikeImg(2)" min="0" max="200" value="100">
+			</div>
+			<div class="column right"><img id="spike2ImageUnfiltered" src="Spikes/Spike 1.png"><img id="spike2Image" src="Spikes/Spike 1.png"></div>
+		</div>
+		</div>
+		<div id="bgMenu" hidden>
+		<div class="itemTitle">
+			<h1>Background</h1>
+			<button id="randomise" onclick="randomiseBg(1)">Randomise!</button>
+		</div>
+			<div class="column left">
+				<h2 id="hueTracker5">Hue +0</h2>
+				<input type="range" class="slider" id="hueSlider5" oninput="updateBgImg(1)" min="-180" max="180" value="0">
+				<h2 id="satTracker5">Sat x1</h2>
+				<input type="range" class="slider" id="satSlider5" oninput="updateBgImg(1)" min="0" max="400" value="100">
+				<h2 id="valTracker5">Val 0%</h2>
+				<input type="range" class="slider" id="valSlider5" oninput="updateBgImg(1)" min="0" max="200" value="100">
+			</div>
+			<div class="column right"><img id="bg1ImageUnfiltered" src="Bg/Bg 1.png"><img id="bg1Image" src="Bg/Bg 1.png"></div>
+		</div>
+		<div id="flagMenu" hidden>
+			<div id="grid">
+				<img src="Resources/Grid.png">
+				<img src="Resources/Flag.png" id="flagPos" hidden>
+				<img src="Resources/Warp.png" id="warpPos" hidden>
+				<button id="randomise" onclick="randomiseObjPos()" style="position:relative;left:50%;transform:translate(-50%);">Randomise!</button>
+			</div>
+		</div>
+		<div id="musicMenu" hidden>
+			<button id="randomise" class="margins" onclick="randomiseGenre()" style="position:relative;left:50%;transform:translate(-50%);">Randomise!</button>
+			<h2 id="genreResults" class="margins">Genre: None Selected</h2>
+			<h2 id="songResults" class="margins">Song: None Selected</h2>
+		</div>
+		<div id="jumpMenu" hidden>
+			<div>
+				<div class="split left">
+					<br>
+					<h2 id="jumpName" class="margins">Jump: None Selected</h2>
+					<h2 id="jumpDifficulty" class="margins">☆☆☆☆☆</h2>
+					<button id="randomise" onclick="randomiseJump()" style="position:relative;left:50%;transform:translate(-50%);">Randomise!</button>
+					<br><br>
+					<div class="dropdown">
+						<button class="dropbtn" id="dropDownDifficulty">Max Difficulty: 5★</button>
+						<div class="dropdown-content">
+							<button id="dropdownButton" onclick="maxStars(1)">1 Star</button>
+							<button id="dropdownButton" onclick="maxStars(2)">2 Stars</button>
+							<button id="dropdownButton" onclick="maxStars(3)">3 Stars</button>
+							<button id="dropdownButton" onclick="maxStars(4)">4 Stars</button>
+							<button id="dropdownButton" onclick="maxStars(5)">5 Stars</button>
+						</div>
+					</div>
+				</div>
+				<div class="split right">
+					<img id="jumpImage" src="Jumps/Gate.png">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

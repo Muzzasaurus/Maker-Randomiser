@@ -1,6 +1,6 @@
 @font-face { font-family: FutureKid; src: url('Fonts/FutureKid.ttf'); } 
 body {
-	background-color: #a2aec2;
+	background-color: #c2a2bd;
 	margin: 0px;
 }
 h1 {
@@ -60,14 +60,14 @@ nav button {
 	font-size: 1.5vw;
 	font-family: Fira Code;
 	font-weight: 700;
-	background-color: #66a6e5;
-	border: 2px solid #4771b6;
-	border-top: 2px solid #88d5f2;
-	border-bottom: 2px solid #39448a;
+	background-color: #fd9dd8;
+	border: 2px solid #b647a4;
+	border-top: 2px solid #f288ee;
+	border-bottom: 2px solid #8a3984;
 	outline: 2px solid black;
 }
 #randomise:hover {
-	background-color: #88d5f2;
+	background-color: #f288ee;
 	border-top: 2px solid #f8f8f8;
 }
 #block1Image, #block2Image, #spike1Image, #spike2Image, #bg1Image {
@@ -139,32 +139,32 @@ nav button {
 	background-image: url('Resources/Slider.png');
 }
 .dropbtn {
-	background-color: #66a6e5;
+	background-color: #fd9dd8;
 	padding: 16px;
 	font-size: 2vw;
 	border: none;
 	font-weight: 700;
-	background-color: #66a6e5;
-	border: 2px solid #4771b6;
-	border-top: 2px solid #88d5f2;
-	border-bottom: 2px solid #39448a;
+	background-color: #fd9dd8;
+	border: 2px solid #b647a4;
+	border-top: 2px solid #f288ee;
+	border-bottom: 2px solid #8a3984;
 	outline: 2px solid black;
 }
 #dropdownButton {
 	font-size: 2vw;
 	font-family: Fira Code;
 	font-weight: 700;
-	background-color: #66a6e5;
-	border: 2px solid #4771b6;
-	border-top: 2px solid #88d5f2;
-	border-bottom: 2px solid #39448a;
+	background-color: #fd9dd8;
+	border: 2px solid #b647a4;
+	border-top: 2px solid #f288ee;
+	border-bottom: 2px solid #8a3984;
 	outline: 2px solid black;
 	left: 50%;
 	transform: translate(-50%);
 	position: relative;
 }
 #dropdownButton:hover {
-	background-color: #88d5f2;
+	background-color: #f288ee;
 	border-top: 2px solid #f8f8f8;
 }
 .dropdown {
@@ -176,20 +176,20 @@ nav button {
 .dropdown-content {
 	display: none;
 	position: absolute;
-	background-color: #66a6e5;
+	background-color: #fd9dd8;
 	min-width: 160px;
 	z-index: 1;
 	font-weight: 700;
-	background-color: #66a6e5;
-	border: 2px solid #4771b6;
-	border-top: 2px solid #88d5f2;
-	border-bottom: 2px solid #39448a;
+	background-color: #fd9dd8;
+	border: 2px solid #b647a4;
+	border-top: 2px solid #f288ee;
+	border-bottom: 2px solid #8a3984;
 	outline: 2px solid black;
 }
 .dropdown:hover .dropdown-content {
 	display: block;
 }
 .dropdown:hover .dropbtn {
-	background-color: #88d5f2;
+	background-color: #f288ee;
 	border-top: 2px solid #f8f8f8;
 }

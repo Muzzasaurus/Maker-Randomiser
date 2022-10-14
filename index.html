@@ -6,7 +6,7 @@
 		<script src="spikeScripts.js" defer></script>
 		<script src="bgScripts.js" defer></script>
 		<script src="jumpScripts.js" defer></script>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css" id="theme">
 		<meta name="author" content="Muzza">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -119,6 +119,16 @@
 					<h2 id="jumpDifficulty" class="margins">☆☆☆☆☆</h2>
 					<button id="randomise" onclick="randomiseJump()" style="position:relative;left:50%;transform:translate(-50%);">Randomise!</button>
 					<br><br>
+					<div class="dropdown">
+						<button class="dropbtn" id="dropDownMinDifficulty">Min Difficulty: 1★</button>
+						<div class="dropdown-content">
+							<button id="dropdownButton" onclick="minStars(0)">1 Star</button>
+							<button id="dropdownButton" onclick="minStars(1)">2 Stars</button>
+							<button id="dropdownButton" onclick="minStars(2)">3 Stars</button>
+							<button id="dropdownButton" onclick="minStars(3)">4 Stars</button>
+							<button id="dropdownButton" onclick="minStars(4)">5 Stars</button>
+						</div>
+					</div>
 					<div class="dropdown">
 						<button class="dropbtn" id="dropDownDifficulty">Max Difficulty: 5★</button>
 						<div class="dropdown-content">

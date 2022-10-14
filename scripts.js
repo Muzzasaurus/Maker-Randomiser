@@ -45,3 +45,29 @@ function randomiseGenre() {
 		document.getElementById("songResults").innerHTML = `Song: ${chosenSong}`;
 	}
 }
+let keylog = [];
+timer = 0;
+document.onkeydown = function (e) {
+    let keypressed = e.key;
+    keylog.push(keypressed);
+	clearInterval(timer);
+	checkArray();
+	timer = setInterval(clearArray, 1000);
+};
+function clearArray() {
+	keylog = [];
+}
+function checkArray() {
+	word = "";
+	for (let i = 0; i < keylog.length; i++) {
+		word += keylog[i];
+	}
+	if (word == "pink") {
+		document.getElementById("theme").href = "pink.css";
+		clearArray();
+	}
+	if (word == "blue") {
+		document.getElementById("theme").href = "style.css";
+		clearArray();
+	}
+}
